@@ -1,0 +1,56 @@
+
+.container-converter {
+  width: 400px;
+  background-color: var(--box-color);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--highlight-color);
+}
+
+p {
+  color: var(--text-color);
+  margin-top: 10px;
+  font-weight: bold;
+}

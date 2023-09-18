@@ -1,0 +1,42 @@
+
+<div class="container-converter">
+    <form (submit)="onSubmit()">
+        <div class="form-group">
+          <label for="amount"> Amount:</label>
+          <input placeholder="Enter amount"
+          type="number"
+          id="amount"
+          name="amount"
+          class="form-control"
+          required
+          [(ngModel)]="amountToConvert">
+        </div>
+
+      <div class="form-group">
+        <label for="baseCurrency">Base Currency:</label>
+        <label id="baseCurrency">{{ fromCurrency }}</label>
+      </div>
+
+      <div class="form-group">
+        <label for="to">To:</label>
+        <select id="to" name="to"
+                [(ngModel)]="toCurrency"
+                class="form-control" required>
+          <option value="EUR">EUR</option>
+          <option value="AUD">AUD</option>
+          <option value="CAD">CAD</option>
+          <option value="PLN">PLN</option>
+          <option value="MXN">MXN</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Convert</button>
+        <p>Converted Amount: {{ convertAmount }}</p>
+      </div>
+
+    </form>
+</div>
+
+
+
