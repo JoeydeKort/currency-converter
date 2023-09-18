@@ -9,14 +9,14 @@ import {environment} from "../../../environments/environment";
 })
 export class CurrencyService {
 
-  constructor(private http: HttpClient) { }
+  private apiKey = environment.apiKey;
+
+  constructor(private http: HttpClient) {}
 
   getCurrencyData(): Observable<CurrencyRespons> {
 
-    const apiKey = environment.apiKey;
-
     const url: string =
-      `https://openexchangerates.org/api/latest.json?app_id=${apiKey}`;
+      `https://openexchangerates.org/api/latest.json?app_id=${this.apiKey}`;
 
     return this.http.get<CurrencyRespons>(url);
 
